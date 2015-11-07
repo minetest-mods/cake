@@ -33,8 +33,9 @@ http://creativecommons.org/licenses/by-sa/4.0/
 
 Authors of textures:
 --------------------
-Derived from textures by rubenwardy (CC BY-SA):
-  cake_bottom.png
-  cake_inner.png
-  cake_side.png
-  cake_top.png
+rubenwardy (CC-BY-SA):
+  cake_bottom.png, derivative
+  cake_inner.png, derivative
+  cake_side.png, derivative
+  cake_sugar.png
+  cake_top.png, derivative

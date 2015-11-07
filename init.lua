@@ -49,8 +49,24 @@ for i, size in ipairs(sizes) do
 	})
 end
 
+if minetest.get_modpath("food") == nil then
+	minetest.register_craftitem("cake:sugar", {
+		description = "Sugar",
+		inventory_image = "cake_sugar.png",
+		groups = {food_sugar=1}
+	})
+	
+	minetest.register_craft({
+		type = "shapeless",
+		output = "cake:sugar",
+		recipe = {"default:papyrus"}
+	})
+else
+	minetest.register_alias("cake:sugar", "food:sugar")
+end
+
 minetest.register_craft({
 	type = "shapeless",
 	output = "cake:cake",
-	recipe = {"farming:flour", "farming:flour", "group:water_bucket"}
+	recipe = {"farming:flour", "group:water_bucket", "group:food_sugar", "group:food_sugar"}
 })
