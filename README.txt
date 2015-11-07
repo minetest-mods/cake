@@ -35,6 +35,7 @@ Authors of textures:
 --------------------
 rubenwardy (CC-BY-SA):
   cake_bottom.png, derivative
+  cake_entity.png
   cake_inner.png, derivative
   cake_side.png, derivative
   cake_sugar.png
