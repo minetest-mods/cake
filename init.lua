@@ -10,20 +10,16 @@ for i, size in ipairs(sizes) do
 	local description
 	local drop
 	local tiles
-	local not_in_creative_inventory
 	
 	if slice == 0 then
 		name = "cake:cake"
 		description = "Cake"
 		drop = nil
 		tiles = {"cake_top.png", "cake_bottom.png", "cake_side.png"}
-		not_in_creative_inventory = 0
 	else
 		name = "cake:cake_"..slice
-		description = "Cake (Slice "..slice..")"
 		drop = ''
 		tiles = {"cake_top.png", "cake_bottom.png", "cake_side.png", "cake_inner.png", "cake_side.png", "cake_side.png"}
-		not_in_creative_inventory = 1
 	end
 	
 	minetest.register_node(name, {
@@ -33,7 +29,7 @@ for i, size in ipairs(sizes) do
 		tiles = tiles,
 		paramtype = "light",
 		is_ground_content = false,
-		groups = {crumbly=3,not_in_creative_inventory=not_in_creative_inventory},
+		groups = {crumbly=3},
 		--sounds = sounds,
 		node_box = {
 			type = "fixed",
@@ -123,4 +119,10 @@ if throwable_cake then
 			return itemstack
 		end,
 	})
+end
+
+if minetest.get_modpath("i18n") then
+	local separator = package.config:sub(1,1)
+	dofile(minetest.get_modpath("i18n")..separator.."init.lua")
+	i18n.localize_mod()
 end
