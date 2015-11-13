@@ -2,6 +2,10 @@ local throwable_cake = false
 
 -- CAKE --
 
+local intllib = minetest.get_modpath("intllib")
+local S = function(s) return s end
+if intllib then S = intllib.Getter() end
+
 local sizes = {-0.4375, -0.3125, -0.1875, -0.0625, 0.0625, 0.1875, 0.3125}
 
 for i, size in ipairs(sizes) do
@@ -13,7 +17,7 @@ for i, size in ipairs(sizes) do
 	
 	if slice == 0 then
 		name = "cake:cake"
-		description = "Cake"
+		description = S("Cake")
 		drop = nil
 		tiles = {"cake_top.png", "cake_bottom.png", "cake_side.png"}
 	else
@@ -51,7 +55,7 @@ end
 
 if minetest.get_modpath("food") == nil then
 	minetest.register_craftitem("cake:sugar", {
-		description = "Sugar",
+		description = S("Sugar"),
 		inventory_image = "cake_sugar.png",
 		groups = {food_sugar=1}
 	})
@@ -121,8 +125,4 @@ if throwable_cake then
 	})
 end
 
-if minetest.get_modpath("i18n") then
-	local separator = package.config:sub(1,1)
-	dofile(minetest.get_modpath("i18n")..separator.."init.lua")
-	i18n.localize_mod()
-end
+if not intllib and minetest.get_modpath("i18n") then i18n.localize_mod() end
