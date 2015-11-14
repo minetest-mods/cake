@@ -72,7 +72,12 @@ end
 minetest.register_craft({
 	type = "shapeless",
 	output = "cake:cake",
-	recipe = {"farming:flour", "group:water_bucket", "group:food_sugar", "group:food_sugar"}
+	recipe = {"farming:flour", "group:water_bucket", "group:food_sugar", "group:food_sugar"},
+	replacements = {
+		-- todo: replace group:water_bucket with bucket:bucket_empty
+		{"bucket:bucket_water", "bucket:bucket_empty"},
+		{"bucket:bucket_river_water", "bucket:bucket_empty"}
+	}
 })
 
 -- THROWABLE CAKE --
