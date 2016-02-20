@@ -77,8 +77,8 @@ minetest.register_craft({
 		{"group:water_bucket", "bucket:bucket_empty"},
 		
 		-- Not needed >0.4.13
--		{"bucket:bucket_water", "bucket:bucket_empty"},
--		{"bucket:bucket_river_water", "bucket:bucket_empty"}
+		{"bucket:bucket_water", "bucket:bucket_empty"},
+		{"bucket:bucket_river_water", "bucket:bucket_empty"}
 	}
 })
 
