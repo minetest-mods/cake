@@ -131,5 +131,3 @@ if throwable_cake then
 		end,
 	})
 end
-
-if not intllib and minetest.get_modpath("i18n") then i18n.localize_mod() end
