@@ -34,6 +34,8 @@ for i, size in ipairs(sizes) do
 		drop = drop,
 		drawtype = "nodebox",
 		tiles = tiles,
+		inventory_image = "cake.png",
+		wield_image = "cake.png",
 		paramtype = "light",
 		is_ground_content = false,
 		groups = {crumbly=3},
@@ -90,7 +92,7 @@ minetest.register_craft({
 minetest.register_entity("cake:cake_entity", {
 	physical = false,
 	timer = 0,
-	textures = {"cake_entity.png"},
+	textures = {"cake.png"},
 	lastpos = {},
 	collisionbox = {0,0,0,0,0,0},
 	on_step = function(self, dtime)

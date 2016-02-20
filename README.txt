@@ -25,18 +25,14 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-License of textures:
---------------------
-Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
-http://creativecommons.org/licenses/by-sa/4.0/
-
-
-Authors of textures:
---------------------
-rubenwardy (CC-BY-SA):
+Authors and licenses of textures:
+---------------------------------
+TenPlus1 (WTFPL):
+  cake.png
   cake_bottom.png, derivative
-  cake_entity.png
   cake_inner.png, derivative
   cake_side.png, derivative
-  cake_sugar.png
   cake_top.png, derivative
+
+rubenwardy (CC-BY-SA):
+  cake_sugar.png
