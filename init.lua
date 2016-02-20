@@ -2,9 +2,12 @@ local throwable_cake = false
 
 -- CAKE --
 
-local intllib = minetest.get_modpath("intllib")
-local S = function(s) return s end
-if intllib then S = intllib.Getter() end
+local S
+if minetest.get_modpath("intllib") then
+	S = intllib.Getter()
+else
+	S = function(s) return s end
+end
 
 local sizes = {-0.4375, -0.3125, -0.1875, -0.0625, 0.0625, 0.1875, 0.3125}
 
