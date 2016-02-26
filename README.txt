@@ -32,7 +32,5 @@ TenPlus1 (WTFPL):
   cake_bottom.png, derivative
   cake_inner.png, derivative
   cake_side.png, derivative
-  cake_top.png, derivative
-
-rubenwardy (CC-BY-SA):
   cake_sugar.png
+  cake_top.png, derivative
