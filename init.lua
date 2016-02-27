@@ -98,10 +98,10 @@ minetest.register_entity("cake:cake_entity", {
 	on_step = function(self, dtime)
 		self.timer=self.timer+dtime
 		local pos = self.object:getpos()
-		local node = minetest.env:get_node(pos)
+		local node = minetest.get_node(pos)
 
 		if self.timer>0.2 then
-			local objs = minetest.env:get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
+			local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
 			for k, obj in pairs(objs) do
 				if obj:get_luaentity() == nil or obj:get_luaentity().name ~= "cake:cake_entity" and obj:get_luaentity().name ~= "__builtin:item" then
 					obj:set_hp(obj:get_hp() + 7)
@@ -112,7 +112,7 @@ minetest.register_entity("cake:cake_entity", {
 
 		if self.lastpos.x~=nil then
 			if node.name ~= "air" then
-				minetest.env:add_item(self.lastpos, 'cake:cake')
+				minetest.add_item(self.lastpos, 'cake:cake')
 				self.object:remove()
 			end
 		end
@@ -127,7 +127,7 @@ if throwable_cake then
 				itemstack:take_item()
 			end
 			local playerpos = player:getpos()
-			local obj = minetest.env:add_entity({x=playerpos.x,y=playerpos.y+1.5,z=playerpos.z}, "cake:cake_entity")
+			local obj = minetest.add_entity({x=playerpos.x,y=playerpos.y+1.5,z=playerpos.z}, "cake:cake_entity")
 			local dir = player:get_look_dir()
 			obj:setvelocity({x=dir.x*19, y=dir.y*19, z=dir.z*19})
 			obj:setacceleration({x=dir.x*-3, y=-10, z=dir.z*-3})
