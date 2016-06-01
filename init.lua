@@ -136,3 +136,17 @@ if throwable_cake then
 		end,
 	})
 end
+
+-- CAKE AWARD --
+if minetest.get_modpath("awards") then
+	awards.register_achievement("award_the_lie", {
+		title = S("The Lie"),
+		description = S("Craft a cake"),
+		icon = "cake.png",
+		trigger = {
+			type = "craft",
+			item = "cake:cake",
+			target = 1
+		}
+	})
+end
