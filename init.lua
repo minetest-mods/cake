@@ -58,7 +58,7 @@ for i, size in ipairs(sizes) do
 	})
 end
 
-if minetest.get_modpath("food") == nil then
+if not minetest.get_modpath("food") then
 	minetest.register_craftitem("cake:sugar", {
 		description = S("Sugar"),
 		inventory_image = "cake_sugar.png",
