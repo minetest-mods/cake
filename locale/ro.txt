@@ -1,0 +1,2 @@
+Cake = Prăjitură
+Sugar = Zahăr

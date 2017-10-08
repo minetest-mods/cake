@@ -1,0 +1,2 @@
+Cake = Keki
+Sugar = Sukari

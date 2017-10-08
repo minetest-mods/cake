@@ -1,0 +1,2 @@
+Cake = Kuko
+Sugar = Sukero

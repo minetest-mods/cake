@@ -1,0 +1,2 @@
+Cake = Pastís
+Sugar = Sucre
