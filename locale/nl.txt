@@ -1,0 +1,2 @@
+Cake = Taart
+Sugar = Suiker
