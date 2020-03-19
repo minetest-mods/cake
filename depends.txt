@@ -1,5 +1,0 @@
-bucket
-farming
-awards?
-food?
-intllib?
